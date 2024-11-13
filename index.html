@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xact Mind</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        .image{
+            border-radius: 20px
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .navbar-brand img {
+            max-width: 120px;
+        }
+
+        .navbar .nav-link {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .hero-section {
+            background-color: white;
+            color: #212529;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+        }
+
+        .hero-section .lead {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .hero-section .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .hero-section .btn-outline-primary {
+            border-color: #007bff;
+            color: #007bff;
+        }
+        h3.display-6 {
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        section p {
+            color: #555;
+        }
+
+        .section-heading {
+            font-size: 1.75rem;
+            font-weight: bold;
+        }
+
+        .list-unstyled li {
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .rounded-3 {
+            border-radius: 1rem;
+        }
+
+        .icon {
+            font-size: 2rem;
+        }
+
+        .card-title {
+            color: #1a1a1a;
+        }
+
+        .card-text {
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .team-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .team-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .team-card {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .team-card:hover {
+            transform: scale(1.05);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .team-info {
+            padding: 15px;
+        }
+
+        .team-name {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .team-role {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .see-more {
+            font-size: 0.9em;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .see-more:hover {
+            text-decoration: underline;
+        }
+
+        .portfolio-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .portfolio-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .project-info {
+            padding: 15px;
+        }
+
+        .project-category {
+            font-size: 0.9em;
+            color: #555;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .project-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .learn-more {
+            font-size: 0.9em;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .learn-more:hover {
+            text-decoration: underline;
+        }
+        /* Contact Form Section */
+        #contact {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        #contact .form-control {
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+        }
+
+        #contact .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        #contact .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact .btn:hover {
+            background-color: #0056b3;
+        }
+
+
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f0f4fa;
+            padding: 50px;
+        }
+
+        .contact-info {
+            background-color: #007bff;
+            color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            flex: 1;
+        }
+
+        .contact-info h2 {
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        .contact-info p, .contact-info ul, .contact-info li {
+            color: #f8f9fa;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .contact-info ul li {
+            margin-bottom: 10px;
+        }
+
+        .contact-info .icon-check {
+            color: #29a745;
+            font-weight: bold;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            flex: 1;
+            margin-left: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .contact-form .form-group label {
+            font-weight: bold;
+        }
+
+        .contact-form .form-control, .contact-form select {
+            border-radius: 4px;
+            box-shadow: none;
+        }
+
+        .contact-form .btn-submit {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .steps-section {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .step {
+            text-align: center;
+            flex: 1;
+        }
+
+        .step-number {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand">
+                <img src="./pic/cropped-xactmind-black-logo.webp" style="width: 120px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Company</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Means</a></li>
+                </ul>
+                <div class="ms-3">
+                    <a href="tel:+447939444967" class="btn me-2">Client Support <br> +44-7939-444967</a>
+                    <a href="#" class="btn btn-primary">Contact us.</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <hr>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center text-md-start py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold">Xact Mind is a leading software and AI development company based in the UK.</h1>
+                    <p class="lead mt-3">Providing comprehensive software and AI solutions designed to meet the evolving needs of consumers and enterprises.</p>
+                    <a href="#" class="btn btn-primary mt-4 me-3">Schedule a free consultation</a>
+                    <a href="#" class="btn btn-outline-primary mt-4">Services</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./pic/xactmind_logo_mockup.webp" alt="Xact Mind Building" class="img-fluid image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Statistics Section -->
+    <section class="py-5 text-center">
+        <hr>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <h3 class="display-6">02 <span class="small">year</span></h3>
+                    <p>Proven track record</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="display-6">100 <span class="small">%</span></h3>
+                    <p>Customer satisfaction</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="display-6">100+ <span class="small">Projects</span></h3>
+                    <p>We are done.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="display-6">5 <span class="small">minutes</span></h3>
+                    <p>Average response time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discover Our Story Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Discover our story.</h2>
+                    <p class="mt-3">Xact Mind is a leading UK-based software and AI development company, providing comprehensive AI solutions tailored to meet the evolving needs of consumers and businesses. We take pride in developing intelligent systems that take business to new heights. Our commitment is to pave the right path for intelligent solutions, ensuring precision and innovation in every project.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="d-flex align-items-center mb-2">
+                            <span class="me-2 text-primary">&#10003;</span> Industry specific skills
+                        </li>
+                        <li class="d-flex align-items-center mb-2">
+                            <span class="me-2 text-primary">&#10003;</span> Skilled and expert teams.
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary mt-3">About us</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <video class="img-fluid image" src="./video/xactmind-home-video.mp4" autoplay controls></video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Our Services Section -->
+    <section class="py-5" style="background-color: #e6f0ff;">
+        <div class="container">
+            <p class="text-uppercase text-muted fw-semibold mb-1">What we offer</p>
+            <h2 class="fw-bold mb-4">Our Services</h2>
+            
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="icon mb-3 text-primary">&#129302;</div>
+                            <h5 class="card-title fw-bold">AI Development Services</h5>
+                            <p class="card-text">Unlock the power of artificial intelligence with Xact Mind’s comprehensive AI development services. Our expert team combines the latest technologies and innovative solutions to develop intelligent systems tailored to meet the evolving needs of businesses.</p>
+                            <a href="#" class="text-primary">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="icon mb-3 text-primary">&#129489;</div>
+                            <h5 class="card-title fw-bold">Machine and Deep Learning</h5>
+                            <p class="card-text">Our specialized services harness the power of advanced algorithms and neural networks to drive business innovation. From developing complex models to implementing cutting-edge solutions, we explore the realms of machine and deep learning, ensuring your business stays ahead in the age of artificial intelligence.</p>
+                            <a href="#" class="text-primary">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="icon mb-3 text-primary">&#128202;</div>
+                            <h5 class="card-title fw-bold">Data Analytics and Visualization</h5>
+                            <p class="card-text">Our experts use advanced analytical techniques and visualization tools to extract meaningful insights from your data. Whether it’s identifying trends, making data-driven decisions, or creating insightful dashboards, we provide comprehensive solutions tailored to your business needs.</p>
+                            <a href="#" class="text-primary">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="icon mb-3 text-primary">&#127760;</div>
+                            <h5 class="card-title fw-bold">Natural Language Processing</h5>
+                            <p class="card-text">Leveraging the latest techniques and technologies, we specialize in analyzing, interpreting and creating human-like text. From sentiment analysis and text classification to chatbot development and language modeling, our tailored solutions optimize your applications and processes.</p>
+                            <a href="#" class="text-primary">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="icon mb-3 text-primary">&#128172;</div>
+                            <h5 class="card-title fw-bold">Chatbots and Generative AI</h5>
+                            <p class="card-text">Our generative AI capabilities empower you to create dynamic and creative content from text to images. Whether it’s automating customer support or creating unique content, Xact Mind’s Chatbots & Generative AI solutions bring innovation and efficiency to your business processes.</p>
+                            <a href="#" class="text-primary">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="icon mb-3 text-primary">&#128187;</div>
+                            <h5 class="card-title fw-bold">Web Scraping and Automation</h5>
+                            <p class="card-text">Our expertise in web scraping, coupled with robust automation solutions, ensures efficiency and accuracy in handling large-scale data. Whether it’s market research, data extraction, or process automation, Xact Mind services streamline your operations, saving time and resources.</p>
+                            <a href="#" class="text-primary">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary">View all services</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container team-section">
+        <h2 class="team-title">Executive Management</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://img.freepik.com/free-photo/phone-park-professional-having-work-successful_1303-2791.jpg?t=st=1731318831~exp=1731322431~hmac=4f4d4df49efbd49dfb797c782c6f2300e4204e6c3fa8134d7733098c64210fa2&w=996" alt="Member 1">
+                    <div class="team-info">
+                        <div class="team-name">Nadia Imtiaz</div>
+                        <div class="team-role">Founder and CEO</div>
+                        <a href="#" class="see-more">SEE MORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://img.freepik.com/premium-photo/asian-girl-backpack-nature-relax-time-holiday-concept-travel-photographer-travel-sightseeing_35721-820.jpg?w=996" alt="Member 2">
+                    <div class="team-info">
+                        <div class="team-name">Noor un nisa</div>
+                        <div class="team-role">Director XactMind (UK)</div>
+                        <a href="#" class="see-more">SEE MORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://img.freepik.com/premium-photo/portrait-funny-offended-young-woman-outdoors-spring-sunny-day_127089-21479.jpg?w=996" alt="Member 3">
+                    <div class="team-info">
+                        <div class="team-name">Zanib Yasmin</div>
+                        <div class="team-role">Chief Technology Officer (CTO)</div>
+                        <a href="#" class="see-more">SEE MORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://img.freepik.com/premium-photo/happy-young-blond-woman-jeans-overalls-glasses-grey-background_1339901-1618.jpg?w=996" alt="Member 4">
+                    <div class="team-info">
+                        <div class="team-name">Tanzila Sultana</div>
+                        <div class="team-role">Business Manager (UK)</div>
+                        <a href="#" class="see-more">SEE MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container portfolio-section">
+        <h2 class="portfolio-title">Portfolio Projects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="https://mlpma8bvuhmo.i.optimole.com/w:auto/h:auto/q:mauto/ig:avif/https://xactmind.com/wp-content/uploads/2024/03/dental-clinic-chatbot-xactmind.jpg" alt="Project 1">
+                    <div class="project-info">
+                        <div class="project-category">Web Development, Chatbots and Generative AI</div>
+                        <div class="project-title">Dental Clinic Consultation and Appointment Booking Chatbot Assistant</div>
+                        <div class="project-description">Elevate your dental clinic experience with our smart sales assistant chatbot powered by OpenAI. Handle consultation inquiries and appointment bookings seamlessly, providing convenient and efficient patient service.</div>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="https://mlpma8bvuhmo.i.optimole.com/w:auto/h:auto/q:mauto/ig:avif/https://xactmind.com/wp-content/uploads/2024/03/admission-recommendation-system-xactmind.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <div class="project-category">Web Development, Machine and Deep Learning</div>
+                        <div class="project-title">AI-based smart admission recommendation system</div>
+                        <div class="project-description">Discover the future of admissions with our AI-based Smart Admission Recommendation System. Leveraging AI technology, our system analyzes student profiles and academic data to provide personalized recommendations for university admissions.</div>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="https://mlpma8bvuhmo.i.optimole.com/w:auto/h:auto/q:mauto/ig:avif/https://xactmind.com/wp-content/uploads/2024/03/attendance-management-system-xactmind.jpg" alt="Project 3">
+                    <div class="project-info">
+                        <div class="project-category">Web Development, Machine and Deep Learning</div>
+                        <div class="project-title">Facial recognition-based student attendance management system</div>
+                        <div class="project-description">Streamline attendance management with our Face Recognition-based Student Attendance Management System, using advanced facial recognition technology to ensure accurate and efficient tracking of student attendance.</div>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="container">
+        <div class="contact-section " >
+            <div class="contact-info">
+                <button class="btn btn-light mb-3">Contact Us.</button>
+                <h2>Let's start a conversation.</h2>
+                <p>For inquiries or to avail our advanced AI services, please feel free to contact us through the following channels. We look forward to your help.</p>
+                <p><strong>Call us:</strong> +92-340-0860641<br>
+                   <strong>UK Contact:</strong> +44-7939-444967</p>
+    
+                <h4>Your benefits:</h4>
+                <ul>
+                    <li><span class="icon-check">✔</span> 24/7 instant support</li>
+                    <li><span class="icon-check">✔</span> Delivery on time</li>
+                    <li><span class="icon-check">✔</span> Skilled and expert teams</li>
+                    <li><span class="icon-check">✔</span> Industry specific skills</li>
+                </ul>
+    
+                <h4>What happens next?</h4>
+                <div class="steps-section">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        We schedule a call and consultation meeting.
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        We do a discovery and implementation.
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        Client reviews and feedback.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Schedule a free consultation</h3>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="firstName">First Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Last Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone <span class="text-danger">*</span></label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="help">How can we help you? <span class="text-danger">*</span></label>
+                        <select id="help" class="form-control" required>
+                            <option selected disabled>Select an option</option>
+                            <option>General Inquiry</option>
+                            <option>Project Consultation</option>
+                            <option>Technical Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">The Message <span class="text-danger">*</span></label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="To better assist you, please describe how we can help..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+    </div>
+    <p style="text-align: center;">© 2024 Exact Mind Privacy Policy</p>
+</div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
